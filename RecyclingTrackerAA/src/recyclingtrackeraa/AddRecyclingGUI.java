@@ -44,9 +44,9 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTitleAdd.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTitleAdd.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTitleAdd.setText("Add Recycling Record");
-        getContentPane().add(lblTitleAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 20, 180, 45));
+        getContentPane().add(lblTitleAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 20, 200, 45));
 
         lblMatType.setText("Material Type");
         getContentPane().add(lblMatType, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 90, -1));
