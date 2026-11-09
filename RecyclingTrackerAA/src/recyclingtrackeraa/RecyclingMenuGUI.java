@@ -28,21 +28,58 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnAddRecyRec = new javax.swing.JButton();
+        btnMngRec = new javax.swing.JButton();
+        btnBackMenu = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnAddRecyRec.setText("Add Recycling Record");
+        btnAddRecyRec.addActionListener(this::btnAddRecyRecActionPerformed);
+
+        btnMngRec.setText("Manage Records");
+        btnMngRec.addActionListener(this::btnMngRecActionPerformed);
+
+        btnBackMenu.setText("Back To Main Menu");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(93, 93, 93)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAddRecyRec, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
+                    .addComponent(btnMngRec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBackMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(45, 45, 45)
+                .addComponent(btnAddRecyRec, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(btnMngRec, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(btnBackMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAddRecyRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddRecyRecActionPerformed
+        AddRecyclingGUI addRec = new AddRecyclingGUI();
+        addRec.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnAddRecyRecActionPerformed
+
+    private void btnMngRecActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMngRecActionPerformed
+        ManageRecyclingGUI manage = new ManageRecyclingGUI();
+        manage.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMngRecActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +107,8 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAddRecyRec;
+    private javax.swing.JButton btnBackMenu;
+    private javax.swing.JButton btnMngRec;
     // End of variables declaration//GEN-END:variables
 }
