@@ -86,9 +86,9 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMngRecActionPerformed
 
     private void btnBackMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackMenuActionPerformed
-        AddIssueGUI issue = new AddIssueGUI();
-        issue.setVisible(true);
-        dispose();
+       // IssueMenuGUI issue = new IssueMenuGUI();
+       // issue.setVisible(true);
+       // dispose();
     }//GEN-LAST:event_btnBackMenuActionPerformed
 
     /**
