@@ -49,6 +49,7 @@ public class IssueMenuGUI extends javax.swing.JFrame {
         displayStatusBtn.addActionListener(this::displayStatusBtnActionPerformed);
 
         mainMenuBtn.setText("Main Menu");
+        mainMenuBtn.addActionListener(this::mainMenuBtnActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,6 +109,10 @@ public class IssueMenuGUI extends javax.swing.JFrame {
         addScreen.setVisible(true);
         dispose();
     }//GEN-LAST:event_displayStatusBtnActionPerformed
+
+    private void mainMenuBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMenuBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mainMenuBtnActionPerformed
 
     /**
      * @param args the command line arguments
