@@ -100,7 +100,9 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnMngRecActionPerformed
 
     private void btnBackMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackMenuActionPerformed
-        // TODO add your handling code here:
+        IssueMenuGUI smart = new IssueMenuGUI();
+        smart.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnBackMenuActionPerformed
 
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
