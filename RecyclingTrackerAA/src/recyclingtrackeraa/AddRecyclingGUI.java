@@ -42,53 +42,61 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
         comboPP = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        setFocusCycleRoot(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitleAdd.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTitleAdd.setText("Add Recycling Record");
         getContentPane().add(lblTitleAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(118, 20, 200, 45));
 
+        lblMatType.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblMatType.setText("Material Type");
-        getContentPane().add(lblMatType, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 90, -1));
+        getContentPane().add(lblMatType, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 90, -1));
 
-        lblMatDet.setText("Materila Detilal");
-        getContentPane().add(lblMatDet, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 80, -1));
+        lblMatDet.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        lblMatDet.setText("Material Details");
+        getContentPane().add(lblMatDet, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 100, -1));
 
+        lblWeight.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblWeight.setText("Weight (kg)");
-        getContentPane().add(lblWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
+        getContentPane().add(lblWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 186, 90, 30));
 
+        lblDate.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblDate.setText("Date");
-        getContentPane().add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 246, 80, 30));
+        getContentPane().add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 80, 30));
 
         btnSavedRec.setBackground(new java.awt.Color(0, 153, 0));
         btnSavedRec.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnSavedRec.setForeground(new java.awt.Color(255, 255, 255));
         btnSavedRec.setText("Save Record");
-        getContentPane().add(btnSavedRec, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 130, -1));
+        getContentPane().add(btnSavedRec, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 150, 40));
 
         btnClear.setBackground(new java.awt.Color(153, 0, 0));
         btnClear.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnClear.setForeground(new java.awt.Color(255, 255, 255));
         btnClear.setText("Clear");
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 110, 30));
+        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 160, 40));
 
         btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(this::btnBackActionPerformed);
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 110, 30));
+        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, 150, 40));
 
         txtMatDet.setText("jTextField1");
-        getContentPane().add(txtMatDet, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 170, -1));
+        getContentPane().add(txtMatDet, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 132, 170, 30));
 
         txtWeight.setText("e.g. 2.0");
-        getContentPane().add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 170, -1));
+        getContentPane().add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 182, 170, 30));
 
         txtDate.setText("dd-mm-yy");
-        getContentPane().add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 170, -1));
+        getContentPane().add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 170, 30));
 
-        comboPP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(comboPP, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 90, 170, -1));
+        comboPP.setBackground(new java.awt.Color(102, 255, 102));
+        comboPP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        comboPP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paper", "Plastic" }));
+        getContentPane().add(comboPP, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 86, 170, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
