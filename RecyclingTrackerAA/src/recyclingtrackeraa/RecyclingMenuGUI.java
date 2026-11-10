@@ -27,44 +27,62 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
         btnAddRecyRec = new javax.swing.JButton();
         btnMngRec = new javax.swing.JButton();
         btnBackMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
+        addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                formKeyPressed(evt);
+            }
+        });
+        getContentPane().setLayout(new java.awt.GridBagLayout());
 
+        btnAddRecyRec.setBackground(new java.awt.Color(0, 153, 0));
+        btnAddRecyRec.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        btnAddRecyRec.setForeground(new java.awt.Color(255, 255, 255));
         btnAddRecyRec.setText("Add Recycling Record");
         btnAddRecyRec.addActionListener(this::btnAddRecyRecActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 14;
+        gridBagConstraints.ipady = 16;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(45, 93, 0, 97);
+        getContentPane().add(btnAddRecyRec, gridBagConstraints);
 
+        btnMngRec.setBackground(new java.awt.Color(0, 153, 0));
+        btnMngRec.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnMngRec.setForeground(new java.awt.Color(255, 255, 255));
         btnMngRec.setText("Manage Records");
         btnMngRec.addActionListener(this::btnMngRecActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 40;
+        gridBagConstraints.ipady = 11;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(38, 93, 0, 97);
+        getContentPane().add(btnMngRec, gridBagConstraints);
 
+        btnBackMenu.setBackground(new java.awt.Color(51, 153, 0));
+        btnBackMenu.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        btnBackMenu.setForeground(new java.awt.Color(255, 255, 255));
         btnBackMenu.setText("Back To Main Menu");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAddRecyRec, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                    .addComponent(btnMngRec, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnBackMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(135, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(btnAddRecyRec, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnMngRec, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(btnBackMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(66, Short.MAX_VALUE))
-        );
+        btnBackMenu.addActionListener(this::btnBackMenuActionPerformed);
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.ipadx = 26;
+        gridBagConstraints.ipady = 14;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(31, 93, 87, 97);
+        getContentPane().add(btnBackMenu, gridBagConstraints);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,6 +98,14 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
         manage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnMngRecActionPerformed
+
+    private void btnBackMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackMenuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBackMenuActionPerformed
+
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formKeyPressed
 
     /**
      * @param args the command line arguments
