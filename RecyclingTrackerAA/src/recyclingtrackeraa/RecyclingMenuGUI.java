@@ -34,13 +34,17 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnAddRecyRec.setBackground(new java.awt.Color(0, 153, 0));
         btnAddRecyRec.setText("Add Recycling Record");
         btnAddRecyRec.addActionListener(this::btnAddRecyRecActionPerformed);
 
+        btnMngRec.setBackground(new java.awt.Color(0, 153, 0));
         btnMngRec.setText("Manage Records");
         btnMngRec.addActionListener(this::btnMngRecActionPerformed);
 
+        btnBackMenu.setBackground(new java.awt.Color(0, 153, 0));
         btnBackMenu.setText("Back To Main Menu");
+        btnBackMenu.addActionListener(this::btnBackMenuActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,6 +84,12 @@ public class RecyclingMenuGUI extends javax.swing.JFrame {
         manage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnMngRecActionPerformed
+
+    private void btnBackMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackMenuActionPerformed
+        AddIssueGUI issue = new AddIssueGUI();
+        issue.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnBackMenuActionPerformed
 
     /**
      * @param args the command line arguments
