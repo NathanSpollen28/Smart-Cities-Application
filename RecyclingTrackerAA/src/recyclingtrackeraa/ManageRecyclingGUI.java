@@ -4,6 +4,8 @@
  */
 package recyclingtrackeraa;
 
+import java.awt.Color;
+
 /**
  *
  * @author Home-PC
@@ -17,6 +19,7 @@ public class ManageRecyclingGUI extends javax.swing.JFrame {
      */
     public ManageRecyclingGUI() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(179,229,252));
     }
 
     /**
@@ -37,6 +40,7 @@ public class ManageRecyclingGUI extends javax.swing.JFrame {
         btnDelRec = new javax.swing.JButton();
         btnShowStats = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
+        lblLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,10 +48,20 @@ public class ManageRecyclingGUI extends javax.swing.JFrame {
         lblMngRecyRec.setText("Manage Recycling Records");
 
         txtEnter.setText("Enter ID");
+        txtEnter.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txtEnterFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txtEnterFocusLost(evt);
+            }
+        });
+        txtEnter.addActionListener(this::txtEnterActionPerformed);
 
         btnSrc.setBackground(new java.awt.Color(0, 153, 0));
+        btnSrc.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSrc.setForeground(new java.awt.Color(255, 255, 255));
-        btnSrc.setText("Search");
+        btnSrc.setText("SEARCH");
         btnSrc.addActionListener(this::btnSrcActionPerformed);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -72,69 +86,84 @@ public class ManageRecyclingGUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         btnDispALL.setBackground(new java.awt.Color(0, 204, 0));
+        btnDispALL.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnDispALL.setForeground(new java.awt.Color(255, 255, 255));
         btnDispALL.setText("Display All");
 
         btnDelRec.setBackground(new java.awt.Color(204, 0, 0));
+        btnDelRec.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnDelRec.setForeground(new java.awt.Color(255, 255, 255));
         btnDelRec.setText("Delete Record");
 
         btnShowStats.setBackground(new java.awt.Color(0, 204, 0));
+        btnShowStats.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnShowStats.setForeground(new java.awt.Color(255, 255, 255));
         btnShowStats.setText("Show Statistics");
+        btnShowStats.addActionListener(this::btnShowStatsActionPerformed);
 
         btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setText("Back");
         btnBack.addActionListener(this::btnBackActionPerformed);
+
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recyclingtrackeraa/logo123.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnDispALL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnShowStats, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnShowStats, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDispALL, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnBack, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDelRec, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE))
-                .addGap(236, 236, 236))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnDelRec, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(137, 137, 137))
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 827, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
-                        .addComponent(btnSrc, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(214, 214, 214)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblLogo)
+                                .addGap(226, 226, 226)
+                                .addComponent(lblMngRecyRec, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 827, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnSrc, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 33, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(448, 448, 448)
-                .addComponent(lblMngRecyRec, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(lblMngRecyRec, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSrc, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblLogo)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblMngRecyRec, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDispALL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnDelRec, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(97, 97, 97)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnShowStats, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(109, 109, 109))
+                    .addComponent(txtEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSrc))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnDispALL, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDelRec, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(51, 51, 51)
+                        .addComponent(btnShowStats, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32))))
         );
 
         pack();
@@ -149,6 +178,24 @@ public class ManageRecyclingGUI extends javax.swing.JFrame {
         menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtEnterFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtEnterFocusGained
+        
+        
+    }//GEN-LAST:event_txtEnterFocusGained
+
+    private void txtEnterFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtEnterFocusLost
+       
+        
+    }//GEN-LAST:event_txtEnterFocusLost
+
+    private void txtEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEnterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEnterActionPerformed
+
+    private void btnShowStatsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowStatsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnShowStatsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +230,7 @@ public class ManageRecyclingGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnSrc;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblMngRecyRec;
     private javax.swing.JTextField txtEnter;
     // End of variables declaration//GEN-END:variables
