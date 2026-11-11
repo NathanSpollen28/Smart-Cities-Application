@@ -32,7 +32,7 @@ public class EventManagerGUI extends javax.swing.JFrame {
     
     private void loadSampleData() {
         eventManager.addEvent(new CleanUpEvent("Community Riverbank Cleanup", "2026-05-12", "Main Street Park", "Clearing plastic waste."));
-        eventManager.addEvent(new TreePlantingEvent("Neighborhood Forest Day", "2026-06-01", "North Hill", "Planting saplings.", 50));
+      //  eventManager.addEvent(new TreePlantingEvent("Neighborhood Forest Day", "2026-06-01", "North Hill", "Planting saplings.", 50));
     }
 
     /**
