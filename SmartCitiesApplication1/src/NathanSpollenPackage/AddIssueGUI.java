@@ -17,6 +17,7 @@ public class AddIssueGUI extends javax.swing.JFrame {
      */
     public AddIssueGUI() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(179,229,252));
     }
 
     /**

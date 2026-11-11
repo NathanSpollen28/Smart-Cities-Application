@@ -17,6 +17,7 @@ public class IssueMenuGUI extends javax.swing.JFrame {
      */
     public IssueMenuGUI() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(179,229,252));
     }
 
     /**
@@ -39,12 +40,18 @@ public class IssueMenuGUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setText("City Reporting System");
 
+        searchDeleteBtn.setBackground(new java.awt.Color(255, 0, 0));
+        searchDeleteBtn.setForeground(new java.awt.Color(255, 255, 255));
         searchDeleteBtn.setText("Search and Delete");
         searchDeleteBtn.addActionListener(this::searchDeleteBtnActionPerformed);
 
+        addBtn.setBackground(new java.awt.Color(204, 204, 0));
+        addBtn.setForeground(new java.awt.Color(255, 255, 255));
         addBtn.setText("Add Issue");
         addBtn.addActionListener(this::addBtnActionPerformed);
 
+        displayStatusBtn.setBackground(new java.awt.Color(0, 153, 255));
+        displayStatusBtn.setForeground(new java.awt.Color(255, 255, 255));
         displayStatusBtn.setText("Display and Status");
         displayStatusBtn.addActionListener(this::displayStatusBtnActionPerformed);
 
@@ -56,38 +63,34 @@ public class IssueMenuGUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(560, 560, 560)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(571, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(displayStatusBtn)
-                    .addComponent(searchDeleteBtn)
-                    .addComponent(addBtn)
-                    .addComponent(mainMenuBtn))
-                .addGap(642, 642, 642))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(560, 560, 560)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(searchDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(displayStatusBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(mainMenuBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(581, Short.MAX_VALUE))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addBtn, displayStatusBtn, mainMenuBtn, searchDeleteBtn});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(jLabel1)
-                .addGap(89, 89, 89)
-                .addComponent(searchDeleteBtn)
+                .addGap(62, 62, 62)
+                .addComponent(searchDeleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(addBtn)
+                .addComponent(addBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(displayStatusBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 305, Short.MAX_VALUE)
+                .addComponent(displayStatusBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 251, Short.MAX_VALUE)
                 .addComponent(mainMenuBtn)
                 .addGap(147, 147, 147))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {addBtn, displayStatusBtn, mainMenuBtn, searchDeleteBtn});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -111,7 +114,9 @@ public class IssueMenuGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_displayStatusBtnActionPerformed
 
     private void mainMenuBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mainMenuBtnActionPerformed
-        // TODO add your handling code here:
+        SmartCityGUI addScreen = new SmartCityGUI();
+        addScreen.setVisible(true);
+        dispose();        
     }//GEN-LAST:event_mainMenuBtnActionPerformed
 
     /**

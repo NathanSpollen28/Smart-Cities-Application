@@ -23,20 +23,23 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="560" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" pref="263" max="-2" attributes="0"/>
-              <EmptySpace pref="571" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="displayStatusBtn" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="searchDeleteBtn" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="addBtn" linkSize="1" min="-2" max="-2" attributes="0"/>
-                  <Component id="mainMenuBtn" linkSize="1" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="560" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="addBtn" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
+                          <Component id="searchDeleteBtn" min="-2" pref="245" max="-2" attributes="0"/>
+                          <Component id="displayStatusBtn" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
+                          <Component id="mainMenuBtn" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="642" max="-2" attributes="0"/>
+              <EmptySpace pref="581" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -45,14 +48,14 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
-              <Component id="searchDeleteBtn" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+              <Component id="searchDeleteBtn" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="addBtn" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <Component id="addBtn" min="-2" pref="50" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="displayStatusBtn" linkSize="2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="305" max="32767" attributes="0"/>
-              <Component id="mainMenuBtn" linkSize="2" min="-2" max="-2" attributes="0"/>
+              <Component id="displayStatusBtn" min="-2" pref="50" max="-2" attributes="0"/>
+              <EmptySpace pref="251" max="32767" attributes="0"/>
+              <Component id="mainMenuBtn" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -69,6 +72,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="searchDeleteBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Search and Delete"/>
       </Properties>
       <Events>
@@ -77,6 +86,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="addBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="cc" red="cc" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Add Issue"/>
       </Properties>
       <Events>
@@ -85,6 +100,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="displayStatusBtn">
       <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="99" red="0" type="rgb"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Display and Status"/>
       </Properties>
       <Events>
