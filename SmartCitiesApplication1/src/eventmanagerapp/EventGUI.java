@@ -89,12 +89,12 @@ public class EventGUI extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(51, 255, 255));
         jButton1.setText("Search");
 
-        jLabel1.setBackground(new java.awt.Color(204, 102, 0));
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 51));
         jLabel1.setText("Search For Events");
         jLabel1.setToolTipText("");
-        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
