@@ -17,6 +17,8 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
      */
     public AddRecyclingGUI() {
         initComponents();
+        getContentPane().setBackground(new java.awt.Color(179,229,252));
+        
     }
 
     /**
@@ -40,63 +42,133 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
         txtWeight = new javax.swing.JTextField();
         txtDate = new javax.swing.JTextField();
         comboPP = new javax.swing.JComboBox<>();
+        lblLogo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setFocusCycleRoot(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitleAdd.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         lblTitleAdd.setText("Add Recycling Record");
-        getContentPane().add(lblTitleAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, 210, 50));
 
         lblMatType.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblMatType.setText("Material Type");
-        getContentPane().add(lblMatType, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 90, 90, -1));
 
         lblMatDet.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblMatDet.setText("Material Details");
-        getContentPane().add(lblMatDet, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 100, -1));
 
         lblWeight.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblWeight.setText("Weight (kg)");
-        getContentPane().add(lblWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 186, 90, 30));
 
         lblDate.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         lblDate.setText("Date");
-        getContentPane().add(lblDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, 80, 30));
 
         btnSavedRec.setBackground(new java.awt.Color(0, 153, 0));
         btnSavedRec.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnSavedRec.setForeground(new java.awt.Color(255, 255, 255));
         btnSavedRec.setText("Save Record");
-        getContentPane().add(btnSavedRec, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 150, 40));
 
-        btnClear.setBackground(new java.awt.Color(153, 0, 0));
+        btnClear.setBackground(new java.awt.Color(204, 0, 0));
         btnClear.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnClear.setForeground(new java.awt.Color(255, 255, 255));
         btnClear.setText("Clear");
-        getContentPane().add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 350, 160, 40));
+        btnClear.addActionListener(this::btnClearActionPerformed);
 
         btnBack.setBackground(new java.awt.Color(153, 153, 153));
         btnBack.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnBack.setText("Back");
         btnBack.addActionListener(this::btnBackActionPerformed);
-        getContentPane().add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 350, 150, 40));
 
-        txtMatDet.setText("jTextField1");
-        getContentPane().add(txtMatDet, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 132, 170, 30));
+        txtMatDet.setText("newspapers/bottle");
+        txtMatDet.addActionListener(this::txtMatDetActionPerformed);
 
         txtWeight.setText("e.g. 2.0");
-        getContentPane().add(txtWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 182, 170, 30));
 
         txtDate.setText("dd-mm-yy");
-        getContentPane().add(txtDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 170, 30));
 
-        comboPP.setBackground(new java.awt.Color(102, 255, 102));
         comboPP.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         comboPP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Paper", "Plastic" }));
-        getContentPane().add(comboPP, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 86, 170, 30));
+        comboPP.addActionListener(this::comboPPActionPerformed);
+
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recyclingtrackeraa/logo123.png"))); // NOI18N
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblMatType, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(comboPP, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(35, 35, 35)
+                                        .addComponent(lblTitleAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 171, Short.MAX_VALUE))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblMatDet, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtMatDet, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnSavedRec, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(430, 430, 430)))
+                .addGap(106, 106, 106))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(269, 269, 269)
+                .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(lblTitleAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblLogo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboPP, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMatType))
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtMatDet, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblMatDet))
+                .addGap(19, 19, 19)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSavedRec, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -106,6 +178,18 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
         menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnClearActionPerformed
+
+    private void comboPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboPPActionPerformed
+
+    private void txtMatDetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMatDetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMatDetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +222,7 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
     private javax.swing.JButton btnSavedRec;
     private javax.swing.JComboBox<String> comboPP;
     private javax.swing.JLabel lblDate;
+    private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblMatDet;
     private javax.swing.JLabel lblMatType;
     private javax.swing.JLabel lblTitleAdd;
