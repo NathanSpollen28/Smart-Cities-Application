@@ -79,6 +79,9 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
         btnBack.setText("Back");
         btnBack.addActionListener(this::btnBackActionPerformed);
 
+        txtMatDet.setText("newspapers/bottle");
+        txtMatDet.addActionListener(this::txtMatDetActionPerformed);
+
         txtWeight.setText("e.g. 2.0");
 
         txtDate.setText("dd-mm-yy");
@@ -183,6 +186,10 @@ public class AddRecyclingGUI extends javax.swing.JFrame {
     private void comboPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboPPActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_comboPPActionPerformed
+
+    private void txtMatDetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMatDetActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMatDetActionPerformed
 
     /**
      * @param args the command line arguments
