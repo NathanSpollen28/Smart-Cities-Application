@@ -71,6 +71,7 @@ public class EventGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(51, 0, 51));
         jButton1.setForeground(new java.awt.Color(51, 255, 255));
         jButton1.setText("Search");
 
