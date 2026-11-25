@@ -14,14 +14,17 @@ public class Issue {
     protected String issueDate;
     protected String issueLocation;
     protected boolean resolved;
+    protected String description;
 
-    public Issue(int id, String issueName, String issueDate, String issueLocation, boolean resolved) {
+    public Issue(int id, String issueName, String issueDate, String issueLocation, boolean resolved,String description) {
         this.id = id;
         this.issueName = issueName;
         this.issueDate = issueDate;
         this.issueLocation = issueLocation;
         this.resolved = resolved;
+        this.description = description;
     }
+    
 
     public int getId() {
         return id;
@@ -42,6 +45,7 @@ public class Issue {
     public String getIssueDate() {
         return issueDate;
     }
+    
 
     public void setIssueDate(String issueDate) {
         this.issueDate = issueDate;
@@ -64,6 +68,15 @@ public class Issue {
     public void setResolved(boolean resolved) {
         this.resolved = resolved;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    
     
     public String displayDetails(){
         
@@ -76,7 +89,7 @@ public class Issue {
         
         }
     
-        return "Issue ID: "+id+"sName: "+issueName+"\nIssue Date: "+issueDate+"\nLocation: "+issueLocation+"\nStatus: "+status;
+        return "Issue ID: "+id+"\nName: "+issueName+"\nIssue Date: "+issueDate+"\nLocation: "+issueLocation+"\nStatus: "+status+"\nDescription: "+description;
     
     }
     

@@ -87,6 +87,7 @@ public class AddIssueGUI extends javax.swing.JFrame {
         jScrollPane1.setViewportView(descriptionArea);
 
         submitBtn.setText("Submit");
+        submitBtn.addActionListener(this::submitBtnActionPerformed);
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel10.setText("Add Issue");
@@ -203,6 +204,33 @@ public class AddIssueGUI extends javax.swing.JFrame {
     private void typeComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_typeComboActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_typeComboActionPerformed
+
+    private void submitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitBtnActionPerformed
+        String issueName = nameField.getText();
+        String issueDate = dateField.getText();
+        String issueLocation = locationField.getText();
+        String description = descriptionArea.getText();
+        
+        if("Road".equals(typeCombo.getSelectedItem())){
+            int id = IssueMenuGUI.issueManager.getNextId();
+            int roadCode = Integer.parseInt(roadCodeField.getText());
+            String roadType = roadTypeField.getText();
+            RoadIssue roadIssue = new RoadIssue(id,issueName,issueDate,issueLocation,false,description,roadCode,roadType);
+            IssueMenuGUI.issueManager.addIssue(roadIssue);
+            
+        }
+        else {
+            int id = IssueMenuGUI.issueManager.getNextId();
+            int areaCode = Integer.parseInt(areaCodeField.getText());
+            String areaType = areaTypeField.getText();
+            UrbanIssue urbanIssue = new UrbanIssue(id, issueName, issueDate, issueLocation, false, description, areaCode, areaType);
+            IssueMenuGUI.issueManager.addIssue(urbanIssue);
+        }
+            
+        
+        
+                
+    }//GEN-LAST:event_submitBtnActionPerformed
 
     /**
      * @param args the command line arguments

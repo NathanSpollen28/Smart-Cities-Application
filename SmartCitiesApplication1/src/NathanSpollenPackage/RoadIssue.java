@@ -13,8 +13,8 @@ public class RoadIssue extends Issue {
     private int roadCode;
     private String roadType;
 
-    public RoadIssue(int id, String issueName, String issueDate, String issueLocation, boolean resolved,int roadCode, String roadType) {
-        super(id,issueName,issueDate,issueLocation,resolved);
+    public RoadIssue(int id, String issueName, String issueDate, String issueLocation, boolean resolved,String description,int roadCode, String roadType) {
+        super(id,issueName,issueDate,issueLocation,resolved,description);
         this.roadCode = roadCode;
         this.roadType = roadType;
     }

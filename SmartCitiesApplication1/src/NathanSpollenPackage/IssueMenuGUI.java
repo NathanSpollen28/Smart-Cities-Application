@@ -6,7 +6,7 @@ package NathanSpollenPackage;
 
 /**
  *
- * @author imnat
+ * @author Nathan Spollen 
  */
 public class IssueMenuGUI extends javax.swing.JFrame {
     
@@ -19,6 +19,7 @@ public class IssueMenuGUI extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(new java.awt.Color(179,229,252));
     }
+    public static IssueManager issueManager = new IssueManager();
 
     /**
      * This method is called from within the constructor to initialize the form.

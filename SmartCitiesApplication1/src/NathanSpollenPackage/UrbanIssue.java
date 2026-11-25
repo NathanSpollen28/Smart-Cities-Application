@@ -12,8 +12,8 @@ public class UrbanIssue extends Issue{
     private int areaCode;
     private String areaType;
 
-    public UrbanIssue(int id, String issueName, String issueDate, String issueLocation, boolean resolved,int areaCode, String areaType) {
-        super(id, issueName, issueDate, issueLocation, resolved);
+    public UrbanIssue(int id, String issueName, String issueDate, String issueLocation, boolean resolved,String description,int areaCode, String areaType) {
+        super(id, issueName, issueDate, issueLocation, resolved,description);
         this.areaCode = areaCode;
         this.areaType = areaType;
     }
@@ -36,7 +36,7 @@ public class UrbanIssue extends Issue{
     
     @Override
     public String displayDetails(){
-        return super.displayDetails()+"\nsArea Code: "+areaCode+"\nArea Type:"+areaType;
+        return super.displayDetails()+"\nArea Code: "+areaCode+"\nArea Type: "+areaType;
     
     }
 
